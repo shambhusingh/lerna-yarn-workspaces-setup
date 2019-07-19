@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.bracketSpacing": false
+}
