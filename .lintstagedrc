@@ -1,0 +1,5 @@
+{
+  linters: {
+    '**/*.+(js|json|css|scss)': ['yarn test', 'git add']
+  }
+}

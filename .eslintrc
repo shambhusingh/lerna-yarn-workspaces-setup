@@ -1,8 +1,12 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "react-hooks", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
   "extends": [
-    "react-app",
+    // "react-app",
     "prettier/react",
     "prettier",
     "plugin:prettier/recommended"
