@@ -1,21 +1,28 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/apps/*",
-    "packages/modules/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/apps/*",
+      "packages/modules/*"
+    ],
+    "nohoist": [
+      "**/webpack-dev-server",
+      "**/babel-loader"
+    ]
+  },
   "scripts": {
-    "lint": "FORCE_COLOR=true lerna run lint",
-    "test": "lerna run lint && lerna run test"
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "commit": "yarn lint"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run lint-staged && yarn test"
+      "pre-commit": "lerna run lint-staged && yarn commit"
     }
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-react-app": "^4.0.1",
