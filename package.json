@@ -1,6 +1,11 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "commit": "yarn lint && yarn test"
+  },
   "workspaces": {
     "packages": [
       "packages/apps/*",
@@ -11,14 +16,9 @@
       "**/babel-loader"
     ]
   },
-  "scripts": {
-    "lint": "lerna run lint",
-    "test": "lerna run test",
-    "commit": "yarn lint"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run lint-staged && yarn commit"
+      "pre-commit": "lerna run lint-staged"
     }
   },
   "devDependencies": {
@@ -26,7 +26,6 @@
     "eslint": "5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-react-app": "^4.0.1",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
